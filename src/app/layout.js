@@ -1,6 +1,7 @@
 import { Geist, Geist_Mono, Roboto } from "next/font/google";
 import "./globals.css";
-import Navbar from "./components/Navbar";
+import Navbar from "../components/Navbar";
+import NextAuthSessionProvider from "@/providers/NextAuthSessionProvider";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -29,19 +30,21 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`${roboto.className} antialiased`}>
-        <div className="flex flex-col min-h-screen">
-          <header>
-            <Navbar />
-          </header>
+      <NextAuthSessionProvider>
+        <body className={`${roboto.className} antialiased`}>
+          <div className="flex flex-col min-h-screen">
+            <header>
+              <Navbar />
+            </header>
 
-          <main className="flex-1">{children}</main>
+            <main className="flex-1">{children}</main>
 
-          <footer className="bg-teal-500 text-center">
-            <h1>NextJS Awesome Footer</h1>
-          </footer>
-        </div>
-      </body>
+            <footer className="bg-teal-500 text-center">
+              <h1>NextJS Awesome Footer</h1>
+            </footer>
+          </div>
+        </body>
+      </NextAuthSessionProvider>
     </html>
   );
 }
