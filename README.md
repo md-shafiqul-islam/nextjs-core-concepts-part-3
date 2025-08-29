@@ -1,4 +1,4 @@
-##TOPICS: Metadata, Image & Font Optimization, API-Route, Caching & Revalidating, Loading Spinner & Redirect, env Variables, Build & Deploy, and Server Actions
+##TOPICS: Metadata, Image & Font Optimization, API-Route, Caching & Revalidating, Loading Spinner & Redirect, env Variables, Build & Deploy, and Server Actions, Authentications
 
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
